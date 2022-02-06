@@ -4,6 +4,8 @@ use clap::{AppSettings, Parser, Subcommand};
 
 pub mod aoc_2021_1_cli;
 pub mod aoc_2021_1b_cli;
+pub mod aoc_2021_2_cli;
+pub mod aoc_2021_2b_cli;
 
 /// About Me!
 ///
@@ -27,6 +29,16 @@ pub enum Command {
     },
     #[clap(name = "day-1b", setting(AppSettings::ArgRequiredElseHelp))]
     DAY1B {
+        #[clap(required = true, parse(from_os_str))]
+        path: PathBuf,
+    },
+    #[clap(name = "day-2", setting(AppSettings::ArgRequiredElseHelp))]
+    DAY2 {
+        #[clap(required = true, parse(from_os_str))]
+        path: PathBuf,
+    },
+    #[clap(name = "day-2b", setting(AppSettings::ArgRequiredElseHelp))]
+    DAY2B {
         #[clap(required = true, parse(from_os_str))]
         path: PathBuf,
     },

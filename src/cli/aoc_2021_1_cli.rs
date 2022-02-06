@@ -1,5 +1,4 @@
 use std::{
-    fmt::Display,
     fs::File,
     io::{self, BufRead},
     path::PathBuf,
@@ -21,18 +20,3 @@ pub fn execute(path: PathBuf) -> Result<(), Box<dyn std::error::Error>> {
     );
     Ok(())
 }
-
-#[derive(Debug)]
-enum MyError {
-    FileNotFound(String),
-}
-
-impl Display for MyError {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        match self {
-            MyError::FileNotFound(path) => path.fmt(f),
-        }
-    }
-}
-
-impl std::error::Error for MyError {}
