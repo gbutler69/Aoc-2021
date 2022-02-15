@@ -12,6 +12,8 @@ pub mod aoc_2021_4_cli;
 pub mod aoc_2021_4b_cli;
 pub mod aoc_2021_5_cli;
 pub mod aoc_2021_5b_cli;
+pub mod aoc_2021_6_cli;
+pub mod aoc_2021_6b_cli;
 
 /// About Me!
 ///
@@ -77,5 +79,19 @@ pub enum Command {
     DAY5B {
         #[clap(required = true, parse(from_os_str))]
         path: PathBuf,
+    },
+    #[clap(name = "day-6", setting(AppSettings::ArgRequiredElseHelp))]
+    DAY6 {
+        #[clap(required = true, parse(from_os_str))]
+        path: PathBuf,
+        #[clap(required = true)]
+        life_cycles: u32,
+    },
+    #[clap(name = "day-6b", setting(AppSettings::ArgRequiredElseHelp))]
+    DAY6B {
+        #[clap(required = true, parse(from_os_str))]
+        path: PathBuf,
+        #[clap(required = true)]
+        life_cycles: u32,
     },
 }
