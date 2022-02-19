@@ -12,3 +12,7 @@ pub mod aoc_2021_6;
 pub mod aoc_2021_6b;
 pub mod aoc_2021_7;
 pub mod aoc_2021_7b;
+pub mod aoc_2021_9;
+pub mod aoc_2021_9b;
+
+pub mod aoc_2021_10;
