@@ -1,8 +1,8 @@
 #[test]
 fn test() {
     assert_eq!(
-        26397,
-        super::determine_total_syntax_error_score([
+        288957,
+        super::determine_incomplete_lines_score([
             "[({(<(())[]>[[{[]{<()<>>",
             "[(()[<>])]({[<{<<[]>>(",
             "{([(<{}[<>[]}>{[]{[(<()>",

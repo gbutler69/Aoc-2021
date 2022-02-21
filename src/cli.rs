@@ -19,6 +19,9 @@ pub mod aoc_2021_7b_cli;
 pub mod aoc_2021_9_cli;
 pub mod aoc_2021_9b_cli;
 
+pub mod aoc_2021_10_cli;
+pub mod aoc_2021_10b_cli;
+
 /// About Me!
 ///
 /// What do I want to say in the long about?
@@ -115,6 +118,16 @@ pub enum Command {
     },
     #[clap(name = "day-9b", setting(AppSettings::ArgRequiredElseHelp))]
     DAY9B {
+        #[clap(required = true, parse(from_os_str))]
+        path: PathBuf,
+    },
+    #[clap(name = "day-10", setting(AppSettings::ArgRequiredElseHelp))]
+    DAY10 {
+        #[clap(required = true, parse(from_os_str))]
+        path: PathBuf,
+    },
+    #[clap(name = "day-10b", setting(AppSettings::ArgRequiredElseHelp))]
+    DAY10B {
         #[clap(required = true, parse(from_os_str))]
         path: PathBuf,
     },

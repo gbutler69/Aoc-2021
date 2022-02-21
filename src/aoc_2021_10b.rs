@@ -5,19 +5,29 @@ use std::iter::Peekable;
 #[cfg(test)]
 mod tests;
 
-pub fn determine_total_syntax_error_score<'a>(code: impl IntoIterator<Item = &'a str>) -> u64 {
-    code.into_iter()
+pub fn determine_incomplete_lines_score<'a>(code: impl IntoIterator<Item = &'a str>) -> u64 {
+    let mut scores = code
+        .into_iter()
         .map(to_token_tree)
         .map(to_syntax_error_value)
-        .sum()
+        .filter(|(sev, _)| *sev == 0)
+        .map(|(_, tt)| tt)
+        .map(to_completion_error_value)
+        .filter(|score| *score > 0)
+        .collect::<Vec<_>>();
+    scores.sort_unstable();
+    scores[scores.len() / 2]
 }
 
 fn to_token_tree(line: &str) -> TokenTree {
     TokenTree::from(line)
 }
 
-fn to_syntax_error_value(tree: TokenTree) -> u64 {
-    tree.syntax_error_value()
+fn to_syntax_error_value(tree: TokenTree) -> (u64, TokenTree) {
+    (tree.syntax_error_value(), tree)
+}
+fn to_completion_error_value(tree: TokenTree) -> u64 {
+    tree.completion_error_value()
 }
 
 struct TokenTree {
@@ -48,20 +58,29 @@ impl TokenTree {
             (OpenSquare, Some(CloseParen))
             | (OpenCurly, Some(CloseParen))
             | (OpenAngle, Some(CloseParen)) => 3,
-            (CloseParen, Some(_)) => 0,
-            (CloseSquare, Some(_)) => 0,
-            (CloseCurly, Some(_)) => 0,
-            (CloseAngle, Some(_)) => 0,
-            (OpenParen, None) => 0,
-            (OpenSquare, None) => 0,
-            (OpenCurly, None) => 0,
-            (OpenAngle, None) => 0,
-            (CloseParen, None) => 0,
-            (CloseSquare, None) => 0,
-            (CloseCurly, None) => 0,
-            (CloseAngle, None) => 0,
             _ => 0,
         }
+    }
+    fn completion_error_value(&self) -> u64 {
+        let mut error_value = 0_u64;
+        for child in self.children.iter() {
+            let ev = child.completion_error_value();
+            if ev > 0 {
+                error_value = error_value * 5 + ev;
+            }
+        }
+        use Token::*;
+        let ev = match (self.opening, self.closing) {
+            (OpenParen, None) => 1,
+            (OpenSquare, None) => 2,
+            (OpenCurly, None) => 3,
+            (OpenAngle, None) => 4,
+            _ => 0,
+        };
+        if ev > 0 {
+            error_value = error_value * 5 + ev;
+        }
+        error_value
     }
 }
 

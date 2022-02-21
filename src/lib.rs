@@ -16,3 +16,4 @@ pub mod aoc_2021_9;
 pub mod aoc_2021_9b;
 
 pub mod aoc_2021_10;
+pub mod aoc_2021_10b;
