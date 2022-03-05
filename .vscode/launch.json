@@ -1,0 +1,520 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in library 'aoc-2021'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--lib",
+                    "--package=aoc-2021"
+                ],
+                "filter": {
+                    "name": "aoc-2021",
+                    "kind": "lib"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'aoc-2021'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=aoc-2021",
+                    "--package=aoc-2021"
+                ],
+                "filter": {
+                    "name": "aoc-2021",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'aoc-2021'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=aoc-2021",
+                    "--package=aoc-2021"
+                ],
+                "filter": {
+                    "name": "aoc-2021",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug integration test 'aoc_2021_3b'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--test=aoc_2021_3b",
+                    "--package=aoc-2021"
+                ],
+                "filter": {
+                    "name": "aoc_2021_3b",
+                    "kind": "test"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug integration test 'aoc_2021_9'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--test=aoc_2021_9",
+                    "--package=aoc-2021"
+                ],
+                "filter": {
+                    "name": "aoc_2021_9",
+                    "kind": "test"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug integration test 'aoc_2021_4b'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--test=aoc_2021_4b",
+                    "--package=aoc-2021"
+                ],
+                "filter": {
+                    "name": "aoc_2021_4b",
+                    "kind": "test"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug integration test 'aoc_2021_13b'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--test=aoc_2021_13b",
+                    "--package=aoc-2021"
+                ],
+                "filter": {
+                    "name": "aoc_2021_13b",
+                    "kind": "test"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug integration test 'aoc_2021_6'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--test=aoc_2021_6",
+                    "--package=aoc-2021"
+                ],
+                "filter": {
+                    "name": "aoc_2021_6",
+                    "kind": "test"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug integration test 'aoc_2021_10b'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--test=aoc_2021_10b",
+                    "--package=aoc-2021"
+                ],
+                "filter": {
+                    "name": "aoc_2021_10b",
+                    "kind": "test"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug integration test 'aoc_2021_11'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--test=aoc_2021_11",
+                    "--package=aoc-2021"
+                ],
+                "filter": {
+                    "name": "aoc_2021_11",
+                    "kind": "test"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug integration test 'aoc_2021_7'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--test=aoc_2021_7",
+                    "--package=aoc-2021"
+                ],
+                "filter": {
+                    "name": "aoc_2021_7",
+                    "kind": "test"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug integration test 'aoc_2021_3'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--test=aoc_2021_3",
+                    "--package=aoc-2021"
+                ],
+                "filter": {
+                    "name": "aoc_2021_3",
+                    "kind": "test"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug integration test 'aoc_2021_5'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--test=aoc_2021_5",
+                    "--package=aoc-2021"
+                ],
+                "filter": {
+                    "name": "aoc_2021_5",
+                    "kind": "test"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug integration test 'aoc_2021_4'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--test=aoc_2021_4",
+                    "--package=aoc-2021"
+                ],
+                "filter": {
+                    "name": "aoc_2021_4",
+                    "kind": "test"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug integration test 'aoc_2021_7b'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--test=aoc_2021_7b",
+                    "--package=aoc-2021"
+                ],
+                "filter": {
+                    "name": "aoc_2021_7b",
+                    "kind": "test"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug integration test 'aoc_2021_9b'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--test=aoc_2021_9b",
+                    "--package=aoc-2021"
+                ],
+                "filter": {
+                    "name": "aoc_2021_9b",
+                    "kind": "test"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug integration test 'aoc_2021_1'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--test=aoc_2021_1",
+                    "--package=aoc-2021"
+                ],
+                "filter": {
+                    "name": "aoc_2021_1",
+                    "kind": "test"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug integration test 'aoc_2021_12b'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--test=aoc_2021_12b",
+                    "--package=aoc-2021"
+                ],
+                "filter": {
+                    "name": "aoc_2021_12b",
+                    "kind": "test"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug integration test 'aoc_2021_2b'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--test=aoc_2021_2b",
+                    "--package=aoc-2021"
+                ],
+                "filter": {
+                    "name": "aoc_2021_2b",
+                    "kind": "test"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug integration test 'aoc_2021_1b'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--test=aoc_2021_1b",
+                    "--package=aoc-2021"
+                ],
+                "filter": {
+                    "name": "aoc_2021_1b",
+                    "kind": "test"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug integration test 'aoc_2021_2'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--test=aoc_2021_2",
+                    "--package=aoc-2021"
+                ],
+                "filter": {
+                    "name": "aoc_2021_2",
+                    "kind": "test"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug integration test 'aoc_2021_11b'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--test=aoc_2021_11b",
+                    "--package=aoc-2021"
+                ],
+                "filter": {
+                    "name": "aoc_2021_11b",
+                    "kind": "test"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug integration test 'aoc_2021_13'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--test=aoc_2021_13",
+                    "--package=aoc-2021"
+                ],
+                "filter": {
+                    "name": "aoc_2021_13",
+                    "kind": "test"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug integration test 'aoc_2021_6b'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--test=aoc_2021_6b",
+                    "--package=aoc-2021"
+                ],
+                "filter": {
+                    "name": "aoc_2021_6b",
+                    "kind": "test"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug integration test 'aoc_2021_12'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--test=aoc_2021_12",
+                    "--package=aoc-2021"
+                ],
+                "filter": {
+                    "name": "aoc_2021_12",
+                    "kind": "test"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug integration test 'aoc_2021_5b'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--test=aoc_2021_5b",
+                    "--package=aoc-2021"
+                ],
+                "filter": {
+                    "name": "aoc_2021_5b",
+                    "kind": "test"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug integration test 'aoc_2021_10'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--test=aoc_2021_10",
+                    "--package=aoc-2021"
+                ],
+                "filter": {
+                    "name": "aoc_2021_10",
+                    "kind": "test"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
