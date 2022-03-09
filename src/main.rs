@@ -2,7 +2,7 @@ use aoc_2021::*;
 use clap::StructOpt;
 use cli::Command::*;
 
-mod cli;
+pub mod cli;
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
     match cli::Arguments::parse().command {
@@ -32,5 +32,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         DAY13B { path } => cli::aoc_2021_13b_cli::execute(path),
         DAY14 { path } => cli::aoc_2021_14_cli::execute(path),
         DAY14B { path } => cli::aoc_2021_14b_cli::execute(path),
+        DAY15 { path } => cli::aoc_2021_15_cli::execute(path),
+        DAY15B { path } => cli::aoc_2021_15b_cli::execute(path),
     }
 }
