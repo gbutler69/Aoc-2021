@@ -29,7 +29,7 @@ impl PolymerMutator {
         for (left_element, right_element) in starting_polymer.into_iter().tuple_windows() {
             polymer
                 .entry((left_element, right_element))
-                .and_modify(|count| *count += 1 as usize)
+                .and_modify(|count| *count += 1)
                 .or_insert(1);
             last_element = right_element;
         }
