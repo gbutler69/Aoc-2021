@@ -27,3 +27,5 @@ pub mod aoc_2021_14;
 pub mod aoc_2021_14b;
 pub mod aoc_2021_15;
 pub mod aoc_2021_15b;
+pub mod aoc_2021_16;
+pub mod aoc_2021_16b;
