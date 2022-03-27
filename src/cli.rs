@@ -35,6 +35,8 @@ pub mod aoc_2021_15_cli;
 pub mod aoc_2021_15b_cli;
 pub mod aoc_2021_16_cli;
 pub mod aoc_2021_16b_cli;
+pub mod aoc_2021_17_cli;
+pub mod aoc_2021_17b_cli;
 
 /// About Me!
 ///
@@ -202,6 +204,16 @@ pub enum Command {
     },
     #[clap(name = "day-16b", setting(AppSettings::ArgRequiredElseHelp))]
     DAY16B {
+        #[clap(required = true, parse(from_os_str))]
+        path: PathBuf,
+    },
+    #[clap(name = "day-17", setting(AppSettings::ArgRequiredElseHelp))]
+    DAY17 {
+        #[clap(required = true, parse(from_os_str))]
+        path: PathBuf,
+    },
+    #[clap(name = "day-17b", setting(AppSettings::ArgRequiredElseHelp))]
+    DAY17B {
         #[clap(required = true, parse(from_os_str))]
         path: PathBuf,
     },

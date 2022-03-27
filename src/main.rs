@@ -36,5 +36,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         DAY15B { path } => cli::aoc_2021_15b_cli::execute(path),
         DAY16 { path } => cli::aoc_2021_16_cli::execute(path),
         DAY16B { path } => cli::aoc_2021_16b_cli::execute(path),
+        DAY17 { path } => cli::aoc_2021_17_cli::execute(path),
+        DAY17B { path } => cli::aoc_2021_17b_cli::execute(path),
     }
 }
